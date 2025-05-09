@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Jua&display=swap');
+:root{
+--font-family: "Baloo 2";
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    font-family: "Baloo 2";
+    min-height: 100vh;
+    height: auto;
+    background-color:#07263a;
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+header .first-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+header .first-bar .first-logo{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+header .first-bar .first-logo img{
+    width: 25px;
+}
+header .first-bar .first-logo h1{
+    color: antiquewhite;
+}
+header .first-bar .first-logo h1 span{
+    color: #fe4501;
+}
+header .first-bar button{
+    color: #ffffff;
+    background-color: #07263a;
+    border: none;
+}
+header .first-bar a{
+    color: #fe4501;
+}
+header .second-bar{
+    display: flex;
+    flex: 1;
+}
+header .second-bar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0.4rem;
+    border: none;
+    cursor: pointer;
+    color: #f9f9f9f9;
+    background-color: #07263a;
+    font-family: var(--font-family);
+}
+header .second-bar button:hover{
+    color: #2d8fd6;
+    transition: 1s ;
+}
+header .second-bar button:focus{
+    background-color: #2d90d640;
+    color: #2d8fd6;
+    transition: 1s ;
+}
+main{
+    width: 100%;
+    height: inherit;
+background-color: #fe4501;
+}
+main button{
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    padding: 15px;
+    background-color: #2d8fd6;
+    color: #f9f9f9f9;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+}
+main button:focus{
+    background-color: #fe4501;
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #051c2b;
+}
+footer .footer-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .footer-icon button{
+    background-color: #ffffff00;
+    color: #ffffff;
+    transition: 1s ;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px 0;
+}
+footer .footer-icon button:hover{
+    border: none;
+    color: #2d8fd6;
+    transition: 1s ;
+}
+footer .footer-icon button:focus{
+    border: none;
+    background-color: #2d90d640;
+    color: #2d8fd6;
+    transition: 1s ;
+}
