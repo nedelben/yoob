@@ -3,125 +3,145 @@
 --font-family: "Baloo 2";
 }
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
 }
 body,html{
-    font-family: "Baloo 2";
-    min-height: 100vh;
-    height: auto;
-    background-color:#07263a;
+ font-family: "Baloo 2";
+ min-height: 100vh;
+ height: auto;
+ background-color:#07263a;
 }
 header{
-    display: flex;
-    flex-direction: column;
+ display: flex;
+ flex-direction: column;
+ background-color: #07263a; /* الحفاظ على لون الخلفية الأصلي */
+ border-bottom: 1px solid #051c2b; /* إضافة خط فاصل سفلي بلون أغمق */
 }
 header .first-bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-}
-header .first-bar .first-logo{
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-}
-header .first-bar .first-logo img{
-    width: 25px;
-}
-header .first-bar .first-logo h1{
-    color: antiquewhite;
-}
-header .first-bar .first-logo h1 span{
-    color: #fe4501;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px 15px; /* إضافة بعض الهوامش */
 }
 header .first-bar button{
-    color: #ffffff;
-    background-color: #07263a;
-    border: none;
+ color: #ffffff; /* الحفاظ على لون النص الأصلي للأزرار */
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ font-size: 1.2em;
+}
+header .first-bar .first-logo{
+ display: flex;
+ align-items: center;
+ justify-content: center; /* توسيط الشعار */
+ flex-grow: 1; /* جعل الشعار يأخذ مساحة أكبر للتوسيط */
+}
+header .first-bar .first-logo img{
+ width: 28px; /* حجم أيقونة الشعار */
+ margin-left: 5px;
+}
+header .first-bar .first-logo h1{
+ color: antiquewhite; /* الحفاظ على لون العنوان الأصلي */
+ font-size: 1.5em;
+ font-weight: bold;
+}
+header .first-bar .first-logo h1 span{
+ color: #fe4501; /* الحفاظ على لون الجزء المميز في العنوان */
 }
 header .first-bar a{
-    color: #fe4501;
+ color: #fe4501; /* الحفاظ على لون الرابط الأصلي */
+ text-decoration: none;
+ font-size: 1.2em;
 }
 header .second-bar{
-    display: flex;
-    flex: 1;
+ display: flex;
+ border-bottom: 1px solid #051c2b; /* إضافة خط سفلي لشريط التبويب الثاني بلون أغمق */
 }
 header .second-bar button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    padding: 0.4rem;
-    border: none;
-    cursor: pointer;
-    color: #f9f9f9f9;
-    background-color: #07263a;
-    font-family: var(--font-family);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex: 1;
+ padding: 10px 0;
+ border: none;
+ cursor: pointer;
+ color: #f9f9f9f9; /* الحفاظ على لون النص الأصلي لأزرار الشريط الثاني */
+ background-color: transparent;
+ font-family: var(--font-family);
+ font-weight: bold;
+ font-size: 1em;
+ transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 header .second-bar button:hover{
-    color: #2d8fd6;
-    transition: 1s ;
+ color: #2d8fd6; /* الحفاظ على لون التhover الأصلي */
+ background-color: rgba(45, 143, 214, 0.1); /* إضافة خلفية خفيفة عند التhover */
 }
 header .second-bar button:focus{
-    background-color: #2d90d640;
-    color: #2d8fd6;
-    transition: 1s ;
+ color: #2d8fd6; /* الحفاظ على لون التركيز الأصلي */
+ background-color: rgba(45, 143, 214, 0.2); /* خلفية أوضح عند التركيز */
+ outline: none;
 }
 main{
-    width: 100%;
-    height: inherit;
-background-color: #fe4501;
+ width: 100%;
+ height: auto;
+ background-color: #fe4501;
+ padding-bottom: 60px;
 }
-main button{
-    position: fixed;
-    bottom: 50px;
-    right: 25px;
-    padding: 15px;
-    background-color: #2d8fd6;
-    color: #f9f9f9f9;
-    border: none;
-    border-radius: 20px;
-    font-size: 20px;
+main button.floating-btn{
+ position: fixed;
+ bottom: 50px;
+ right: 25px;
+ padding: 15px;
+ background-color: #2d8fd6;
+ color: #f9f9f9f9;
+ border: none;
+ border-radius: 20px;
+ font-size: 20px;
+ cursor: pointer;
+ outline: none;
 }
-main button:focus{
-    background-color: #fe4501;
+main button.floating-btn:focus{
+ background-color: #fe4501;
 }
 footer{
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #051c2b;
+ width: 100%;
+ position: fixed;
+ bottom: 0;
+ right: 0;
+ left: 0;
+ background-color: #051c2b;
 }
 footer .footer-icon{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ background-color: #051c2b;
 }
 footer .footer-icon button{
-    background-color: #ffffff00;
-    color: #ffffff;
-    transition: 1s ;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 10px 0;
+ background-color: transparent;
+ color: #ffffff;
+ transition: color 0.3s ease-in-out;
+ border: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex: 1;
+ padding: 10px 0;
+ cursor: pointer;
+ outline: none;
+ font-size: 1.1em;
 }
 footer .footer-icon button:hover{
-    border: none;
-    color: #2d8fd6;
-    transition: 1s ;
+ border: none;
+ color: #2d8fd6;
+ transition: color 0.3s ease-in-out;
+ background-color: rgba(45, 143, 214, 0.1);
 }
 footer .footer-icon button:focus{
-    border: none;
-    background-color: #2d90d640;
-    color: #2d8fd6;
-    transition: 1s ;
+ border: none;
+ background-color: rgba(45, 144, 214, 0.25);
+ color: #2d8fd6;
+ transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
