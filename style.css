@@ -39,12 +39,11 @@ header .first-bar .first-logo{
  flex-grow: 1; /* جعل الشعار يأخذ مساحة أكبر للتوسيط */
 }
 header .first-bar .first-logo img{
- width: 28px; /* حجم أيقونة الشعار */
- margin-left: 5px;
+ width: 30px; /* حجم أيقونة الشعار */
 }
 header .first-bar .first-logo h1{
  color: antiquewhite; /* الحفاظ على لون العنوان الأصلي */
- font-size: 1.5em;
+ font-size: 40px;
  font-weight: bold;
 }
 header .first-bar .first-logo h1 span{
@@ -84,10 +83,7 @@ header .second-bar button:focus{
  outline: none;
 }
 main{
- width: 100%;
- height: auto;
- background-color: #fe4501;
- padding-bottom: 60px;
+ 
 }
 main button.floating-btn{
  position: fixed;
