@@ -1,61 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-    <!-- Leaflet CSS -->
-<link
-rel="stylesheet"
-href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-integrity="sha256-o9N1j7kP8hO4VlssZz9ecf9LxV5e9sLzzYx3Nfndz3A="
-crossorigin=""
-/>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Jua&display=swap');
+:root{
+--font-family: "Baloo 2";
+}
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body,html{
+ font-family: "Baloo 2";
+ min-height: 100vh;
+ height: auto;
+ background-color:#07263a;
+}
+header{
+ display: flex;
+ flex-direction: column;
+ background-color: #07263a; /* الحفاظ على لون الخلفية الأصلي */
+ border-bottom: 1px solid #051c2b; /* إضافة خط فاصل سفلي بلون أغمق */
+ position: fixed;
+ top: 0;
+ right: 0;
+ left: 0;
+}
+header .first-bar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px 15px; /* إضافة بعض الهوامش */
+}
+header .first-bar button{
+ color: #ffffff; /* الحفاظ على لون النص الأصلي للأزرار */
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ font-size: 1.2em;
+}
+header .first-bar .first-logo{
+ display: flex;
+ align-items: center;
+ justify-content: center; /* توسيط الشعار */
+ flex-grow: 1; /* جعل الشعار يأخذ مساحة أكبر للتوسيط */
+}
+header .first-bar .first-logo img{
+ width: 30px; /* حجم أيقونة الشعار */
+}
+header .first-bar .first-logo h1{
+ color: antiquewhite; /* الحفاظ على لون العنوان الأصلي */
+ font-size: 40px;
+ font-weight: bold;
+}
+header .first-bar .first-logo h1 span{
+ color: #fe4501; /* الحفاظ على لون الجزء المميز في العنوان */
+}
+header .first-bar a{
+ color: #fe4501; /* الحفاظ على لون الرابط الأصلي */
+ text-decoration: none;
+ font-size: 1.2em;
+}
+header .second-bar{
+ display: flex;
+ border-bottom: 1px solid #051c2b; /* إضافة خط سفلي لشريط التبويب الثاني بلون أغمق */
+}
+header .second-bar button{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex: 1;
+ padding: 10px 0;
+ border: none;
+ cursor: pointer;
+ color: #f9f9f9f9; /* الحفاظ على لون النص الأصلي لأزرار الشريط الثاني */
+ background-color: transparent;
+ font-family: var(--font-family);
+ font-weight: bold;
+ font-size: 1em;
+ transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+header .second-bar button:hover{
+ color: #2d8fd6; /* الحفاظ على لون التhover الأصلي */
+ background-color: rgba(45, 143, 214, 0.1); /* إضافة خلفية خفيفة عند التhover */
+}
+header .second-bar button:focus{
+ color: #2d8fd6; /* الحفاظ على لون التركيز الأصلي */
+ background-color: rgba(45, 143, 214, 0.2); /* خلفية أوضح عند التركيز */
+ outline: none;
+}
+main{
+ 
+}
+main button.floating-btn{
+ position: fixed;
+ bottom: 50px;
+ right: 25px;
+ padding: 15px;
+ background-color: #2d8fd6;
+ color: #f9f9f9f9;
+ border: none;
+ border-radius: 20px;
+ font-size: 20px;
+ cursor: pointer;
+ outline: none;
+}
+main button.floating-btn:focus{
+ background-color: #fe4501;
+}
+footer{
+ width: 100%;
+ position: fixed;
+ bottom: 0;
+ right: 0;
+ left: 0;
+ background-color: #051c2b5b;
+}
+footer .footer-icon{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ background-color: #051c2b00;
+}
+footer .footer-icon button{
+ background-color: transparent;
+ color: #ffffff;
+ transition: color 0.3s ease-in-out;
+ border: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex: 1;
+ padding: 10px 0;
+ cursor: pointer;
+ outline: none;
+ font-size: 1.1em;
+}
+footer .footer-icon button:hover{
+ border: none;
+ color: #2d8fd6;
+ transition: color 0.3s ease-in-out;
+ background-color: rgba(45, 143, 214, 0.1);
+}
+footer .footer-icon button:focus{
+ border: none;
+ background-color: rgba(45, 144, 214, 0.25);
+ color: #2d8fd6;
+ transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
-<!-- Leaflet JS -->
-<script
-src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-integrity="sha256-o8EyVR+DpFYJk8oLSM0l1n0hKg9tbZPEeb1i7cS5pVk="
-crossorigin=""
-></script>
-<meta name="theme-color" content="#07263a" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-   integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-   crossorigin="anonymous"
-   referrerpolicy="no-referrer"
-  />
-  <link rel="stylesheet" href="style.css" />
-  <title>Thridz</title> </head>
- <body>
-  <header>
-   <div class="first-bar">
-    <button><i class="fa fa-bars"></i></button>
-    <div class="first-logo">
-     <h1><span>T</span>hridz</h1>
-     <img src="badge-check-svgrepo-com.svg" alt="Verified" /> </div>
-    <a href="#"> <i class="fa-solid fa-hashtag"></i>
-    </a>
-   </div>
-   <div class="second-bar">
-    <button>Next</button>
-    <button>For you</button>
-   </div>
-  </header>
-  <main id="feed">
-    <section id="posts-container"></section>
 
-   <button class="floating-btn"><i class="fa fa-feather"></i></button>
-  </main>
-  <footer>
-    <div class="footer-icon">
-     <button><i class="fa fa-home"></i></button>
-     <button><i class="fa fa-search"></i></button>
-     <button><i class="fa-regular fa-bell"></i></button>
-     <button><i class="fa-regular fa-envelope"></i></button>
-    </div>
-   </footer>
-  <script src="main.js"></script>
- </body>
-</html>
+
+
+
+/* منشورات وهمية (سكيليتون) */
+.post {
+    background-color: #0c2c45;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .avatar-skeleton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1c3a54;
+    margin-right: 0.75rem;
+  }
+  .user-info {
+    flex: 1;
+  }
+  .name-skeleton, .handle-skeleton {
+    height: 10px;
+    background-color: #1c3a54;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+  .name-skeleton {
+    width: 80px;
+  }
+  .handle-skeleton {
+    width: 50px;
+  }
+  .menu-skeleton {
+    width: 20px;
+    height: 20px;
+    background-color: #1c3a54;
+    border-radius: 3px;
+  }
+  .post-text-skeleton {
+    height: 12px;
+    background-color: #1c3a54;
+    margin: 8px 0;
+    border-radius: 4px;
+  }
+  .post-text-skeleton.short {
+    width: 60%;
+  }
+  .post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    color: #aaa;
+  }
+  .post-actions i {
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  
+
 
