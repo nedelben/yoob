@@ -150,5 +150,68 @@ footer .footer-icon button:focus{
 
 
 
+/* منشورات وهمية (سكيليتون) */
+.post {
+    background-color: #0c2c45;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .avatar-skeleton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1c3a54;
+    margin-right: 0.75rem;
+  }
+  .user-info {
+    flex: 1;
+  }
+  .name-skeleton, .handle-skeleton {
+    height: 10px;
+    background-color: #1c3a54;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+  .name-skeleton {
+    width: 80px;
+  }
+  .handle-skeleton {
+    width: 50px;
+  }
+  .menu-skeleton {
+    width: 20px;
+    height: 20px;
+    background-color: #1c3a54;
+    border-radius: 3px;
+  }
+  .post-text-skeleton {
+    height: 12px;
+    background-color: #1c3a54;
+    margin: 8px 0;
+    border-radius: 4px;
+  }
+  .post-text-skeleton.short {
+    width: 60%;
+  }
+  .post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    color: #aaa;
+  }
+  .post-actions i {
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  
+
 
 
