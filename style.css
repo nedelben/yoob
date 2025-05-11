@@ -18,6 +18,10 @@ header{
  flex-direction: column;
  background-color: #07263a; /* الحفاظ على لون الخلفية الأصلي */
  border-bottom: 1px solid #051c2b; /* إضافة خط فاصل سفلي بلون أغمق */
+ position: fixed;
+ top: 0;
+ right: 0;
+ left: 0;
 }
 header .first-bar{
  display: flex;
@@ -141,3 +145,10 @@ footer .footer-icon button:focus{
  color: #2d8fd6;
  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
+
+
+
+
+
+
