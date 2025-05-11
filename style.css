@@ -27,7 +27,7 @@ header .first-bar{
  display: flex;
  align-items: center;
  justify-content: space-between;
- padding: 10px 15px; /* إضافة بعض الهوامش */
+ padding: 0 15px; /* إضافة بعض الهوامش */
 }
 header .first-bar button{
  color: #ffffff; /* الحفاظ على لون النص الأصلي للأزرار */
@@ -213,9 +213,6 @@ footer .footer-icon button:focus{
     cursor: pointer;
   }
   
-
-
-
 
 
 
