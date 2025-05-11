@@ -111,13 +111,13 @@ footer{
  bottom: 0;
  right: 0;
  left: 0;
- background-color: #051c2b;
+ background-color: #051c2b5b;
 }
 footer .footer-icon{
  display: flex;
  align-items: center;
  justify-content: space-around;
- background-color: #051c2b;
+ background-color: #051c2b00;
 }
 footer .footer-icon button{
  background-color: transparent;
@@ -212,6 +212,7 @@ footer .footer-icon button:focus{
     cursor: pointer;
   }
   
+
 
 
 
